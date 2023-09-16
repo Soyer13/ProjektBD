@@ -22,8 +22,9 @@ Bazy Danych
 	- users
 	- products
 	- transactions
-		- delivery type
+	- delivery type
 	- opinions 
+	- categories (products categories)
 
 CSS
 	Biały - #FEFEFC
