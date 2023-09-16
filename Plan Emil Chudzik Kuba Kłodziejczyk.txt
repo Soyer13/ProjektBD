@@ -24,4 +24,10 @@ Bazy Danych
 	- transactions
 		- delivery type
 	- opinions 
-	
+
+CSS
+	Biały - #FEFEFC
+	Czarny
+	Zielony - #00FF19
+	Czerwony - #DE1D43
+

@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #FEFEFC;
+}
+header{
+    background-color: #02A676;
+    /*color: #6BFF4A;*/
+    display: flex;
+    height: 150px;
+}
+main{
+    
+}
+footer{
+    display: flex;
+    color: #DE1D43;
+}
+
+#serchbarform{
+    margin: 10px;
+    padding-top: 40px;
+}
+#serchbar{
+    margin-top: 10px;
+    width: 500px;
+    height: 40px;
+    font-size: 30px;
+    color: #DE1D43;
+}
+#serchbarButton{
+    height: 50px;
+    width: 100px;
+    margin-bottom: 40px;
+}
+button{
+    border: 0px;
+    padding: 0px;
+}
+h1{
+    text-align: center;
+}
