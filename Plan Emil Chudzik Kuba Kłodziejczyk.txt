@@ -28,6 +28,6 @@ Bazy Danych
 CSS
 	Biały - #FEFEFC
 	Czarny
-	Zielony - #00FF19
+	Zielony - #02A676
 	Czerwony - #DE1D43
 
