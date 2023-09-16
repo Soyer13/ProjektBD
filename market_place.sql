@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 16 Wrz 2023, 20:47
+-- Czas generowania: 16 Wrz 2023, 20:52
 -- Wersja serwera: 10.4.25-MariaDB
 -- Wersja PHP: 8.1.10
 
@@ -44,7 +44,8 @@ CREATE TABLE `transactions` (
   `id` int(11) NOT NULL,
   `products_id` int(11) NOT NULL,
   `users_id` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL
+  `quantity` int(11) NOT NULL,
+  `opinion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -60,7 +61,7 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   `login` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `if_admin` varchar(3) NOT NULL
+  `if_admin` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
