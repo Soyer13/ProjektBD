@@ -1,0 +1,27 @@
+Emil Chudzik Kuba Kołodziejczyk 
+
+Strona
+>Strona Typu Alegro/Amazon
+>Strona dla uzytkownika 
+	- Dodawanie ofert
+	- "Dokonywanie zakupów"
+	- wyszukiwanie prodóktów
+		- po nazwie
+		- po kategori
+	- utrzymywanie sesji logowania 
+	- koszyk
+	- promowanie produktów za opłatą
+	-? porównywanie cen produktu do konkurencyjnych ofert
+> Strona dla admina 
+	- Dodawanie Promocji 
+	- Usuwanie Ofert
+	- moderacja kont użytkowników 
+
+Bazy Danych 
+>TABELE 
+	- users
+	- products
+	- transactions
+		- delivery type
+	- opinions 
+	
