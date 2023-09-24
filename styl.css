@@ -20,7 +20,7 @@ main{
 }
 .Produkt-Pr
 {
-    display: flex;
+    display:inline-flex;
     transition: transform 0.5s;
 }
 .prev-button
