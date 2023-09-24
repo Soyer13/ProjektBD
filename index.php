@@ -33,12 +33,12 @@
             <div class='slider'>
                 <div class="product-container">
                 <?php
-                $sql  = "SELECT name , price FROM products";
+                $sql  = "SELECT id,name , price FROM products";
                 $dane =  mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($dane)) {
                 ?>
                     <div class="Oferta-Na-Czasie">
-                        <h2><?php echo  $row['name'] ?></h2>
+                        <h2><a href="oferta.php?id='<?php echo $row['id'] ?>'"><?php echo  $row['name'] ?></a></h2>
                         <br>
                         <h3><?php echo $row['price'], " zł" ?></h3>
                     </div>

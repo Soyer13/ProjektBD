@@ -12,5 +12,9 @@
         <h1>SKLEP</h1>
         <form id="serchbarform" action="" method="post"><input id=serchbar type="text" placeholder="Wyszukaj"> <button id=serchbarButton>Wyszukaj</button></form>
     </header>
+    <?php
+    $idP = $_GET['id'];
+    ?>
+     
 </body>
 </html>

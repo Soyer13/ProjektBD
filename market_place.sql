@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 24 Wrz 2023, 16:55
+-- Czas generowania: 24 Wrz 2023, 18:57
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.2.0
 
@@ -59,7 +59,17 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `prod_cat_id`, `price`, `users_id`) VALUES
-(1, 'Donica XL Zielona', 1, 35, 1);
+(1, 'Donica XL Zielona', 1, 35, 1),
+(2, 'PS4 Stan Nowy', 2, 1500, 1),
+(3, 'Kapelusz', 3, 20, 3),
+(4, 'Pieluchy', 5, 20, 2),
+(5, 'Inwit - Algorytm Wojny', 8, 30, 4),
+(6, 'Opel Astra 2002', 10, 3000, 1),
+(7, 'Kąpielówki', 9, 100, 2),
+(8, 'Owoce', 4, 12, 1),
+(9, 'Dyzodorant', 6, 20, 1),
+(10, 'Berwitin', 7, 1500, 1),
+(11, 'PS5 Używane', 2, 2500, 4);
 
 -- --------------------------------------------------------
 
@@ -133,7 +143,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `last_name`, `first_name`, `email`, `login`, `password`, `if_admin`) VALUES
-(1, 'Kowalski', 'Artur', 'kowalski_a99@wp.pl', 'kowalski_a99', '', 'n');
+(1, 'Kowalski', 'Artur', 'kowalski_a99@wp.pl', 'kowalski_a99', '', 'n'),
+(2, 'Dudek', 'Adam', 'AdamDudek@gmail.com', 'ADudek', 'maslo123', 'n'),
+(3, 'Szlufk', 'Kuba', 'KubaSzlufik@gmail.com', 'KSzlufk', '123', 'n'),
+(4, 'Soyer', 'Emil', 'EmilSoyer1234@gamil.com', 'EAdmin', 'Admin', 'y');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -188,7 +201,7 @@ ALTER TABLE `delivery_type`
 -- AUTO_INCREMENT dla tabeli `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT dla tabeli `product_categories`
@@ -206,7 +219,7 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ograniczenia dla zrzutów tabel
