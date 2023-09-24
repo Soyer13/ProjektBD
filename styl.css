@@ -18,6 +18,9 @@ main{
 {
   color: #02A676;
 }
+#NaCzasie button{
+    color: #DE1D43;
+}
 .Produkt-Pr
 {
     display:flex;
@@ -51,6 +54,17 @@ main{
     width: 200px;
     border-style: solid;
     margin: 5px;
+    padding: 30px;
+}
+.Produkt
+{
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    margin: 5px;
+    padding: 40px;
+    color: #DE1D43;
 }
 #Kategorie
 {

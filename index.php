@@ -28,9 +28,10 @@
         <form id="serchbarform" action="" method="post"><input id=serchbar type="text" placeholder="Wyszukaj"> <button id=serchbarButton>Wyszukaj</button></form>
     </header>
     <main>
-        <div id='NaCzasie'>
+        <div id='NaCzasie' class="scroll-container">
             <h1>Na Czasie</h1>
-            <div class='Produkt-Pr'>
+            <div class='slider'>
+                <div class="product-container">
                 <?php
                 $sql  = "SELECT name , price FROM products";
                 $dane =  mysqli_query($conn, $sql);
@@ -44,10 +45,14 @@
                 <?php
                 }
                 ?>
+                </div>
+                <button class="prev-button">&#9664;</button>
+                <button class="next-button">&#9654;</button>
             </div>
+            
         </div>
 
-        <div id='Kategorie'>
+        <div id='Kategorie' class="scroll-container">
                 <h1>Kategorie</h1>
             <div class="slider">
                 <div class="product-container">
@@ -67,19 +72,20 @@
                 <button class="prev-button">&#9664;</button>
                 <button class="next-button">&#9654;</button>
             </div>
-            <script src="script.js"></script>
+            
 
         </div>
         </div>
-        <div id='Dla-CB'>
+        <div id='Dla-CB' class="scroll-container">
             <h1>Dla Ciebie</h1>
-            <div class='Produkt-Pr'>
+            <div class='slider'>
+            <div class="product-container">
                 <?php
                 $sql  = "SELECT name , price FROM products";
                 $dane =  mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($dane)) {
                 ?>
-                    <div class="Dla-CB-Pr">
+                    <div class="Produkt">
                         <h2><?php echo  $row['name'] ?></h2>
                         <br>
                         <h3><?php echo $row['price'], " zł" ?></h3>
@@ -87,9 +93,13 @@
                 <?php
                 }
                 ?>
+                </div>
+                <button class="prev-button">&#9664;</button>
+                <button class="next-button">&#9654;</button>
             </div>
 
         </div>
+        
 
     </main>
     <footer>
