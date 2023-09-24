@@ -20,7 +20,7 @@ main{
 }
 .Produkt-Pr
 {
-    display:inline-flex;
+    display:flex;
     transition: transform 0.5s;
 }
 .prev-button
@@ -32,6 +32,7 @@ main{
     border: none;
     font-size: 24px;
     cursor: pointer;
+    color: #02A676;
 }
 .next-button {
     position: absolute;
@@ -41,6 +42,7 @@ main{
     border: none;
     font-size: 24px;
     cursor: pointer;
+    color: #02A676;
 }
 .Oferta-Na-Czasie
 {
@@ -64,6 +66,7 @@ main{
     background-color: #1A1A1A;
     color: #DE1D43;
     margin: 5px;
+    padding: 100px;
 }
 footer{
     display: flex;
@@ -97,3 +100,15 @@ button{
 h1{
     text-align: center;
 }
+
+/* styles.css */
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-container {
+    display:flex;
+    transition: transform 0.5s;
+}
+

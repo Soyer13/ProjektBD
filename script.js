@@ -1,5 +1,5 @@
 // script.js
-const productContainer = document.querySelector('.Produkt-Pr');
+const productContainer = document.querySelector('.product-container');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 
