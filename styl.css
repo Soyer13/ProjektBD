@@ -14,9 +14,61 @@ header{
 main{
     
 }
+#NaCzasie
+{
+  color: #02A676;
+}
+.Produkt-Pr
+{
+    display: flex;
+    transition: transform 0.5s;
+}
+.prev-button
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.Oferta-Na-Czasie
+{
+    text-align: center;
+    height: 200px;
+    width: 200px;
+}
+#Kategorie
+{
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+.Kategorie
+{
+    height: 350px;
+    width: 300px;
+    text-align:center;
+    font-size: 30px;
+    padding-top: 150px;
+    background-color: #1A1A1A;
+    color: #DE1D43;
+    margin: 5px;
+}
 footer{
     display: flex;
-    color: #DE1D43;
+    color: #02A676;
+    background-color: #1A1A1A;
 }
 
 #serchbarform{
