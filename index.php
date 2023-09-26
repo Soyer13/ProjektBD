@@ -12,20 +12,12 @@
 
 <body>
     <?php
-    $host = "localhost";
-    $user = "root";
-    $pas = "";
-    $db = "market_place";
-    $conn = mysqli_connect($host, $user, $pas, $db);
 
-    if ($conn->connect_error) {
-        die("Problem z połączeniem");
-    }
-
+    require_once('connection.php');
     ?>
     <header>
         <h1>SKLEP</h1>
-        <form id="serchbarform" action="" method="post"><input id=serchbar type="text" placeholder="Wyszukaj"> <button id=serchbarButton>Wyszukaj</button></form>
+        <form id="serchbarform" action="search.php" method="GET"><input id=serchbar type="text" placeholder="Wyszukaj"> <button id=serchbarButton>Wyszukaj</button></form>
     </header>
     <main>
         <div id='NaCzasie' class="scroll-container">
