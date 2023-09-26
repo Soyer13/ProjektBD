@@ -23,27 +23,47 @@
     $dane =  mysqli_query($conn, $sql);
     ?>
     <main>
-        <div>
-            <h1>
-                <?php 
+        <?php 
                 if ($dane) {
                 // Pobierz dane z wyniku zapytania
                 $row = mysqli_fetch_assoc($dane);
+                ?>
+        <div id= nazwa>
+            <h1>
 
-                // Wyświetl dane
-                if ($row) {
-                    echo "ID Produktu: " . $row['id'] . "<br>";
-                    echo "Nazwa: " . $row['name'] . "<br>";
-                    echo "ID Kategorii Produktu: " . $row['prod_cat_id'] . "<br>";
-                    echo "Cena: " . $row['price'] . "<br>";
-                    echo "Login użytkownika: " . $row['login'] . "<br>";
-                } else {
-                    echo "Brak wyników.";
-                }
-            }
-?></h1>
+                    <h1><?php echo  $row['name'] ;?> </h1>
+
         </div>
-    </main>
+        <div id= "Oferta-Main">
+        <div id="img">
+            <img src="TakaPrawda.png" alt= "zdjęcie">
+        </div>
+        <div id="Panel-Oferty">
+            <div id="Sprzedawca"><h2><?php echo "Sprzedawca : ", $row['login']; ?></h2> </div>
+            <div id="Prod-info">
+                <h2><?php echo  $row['name']; ?></h2>
+                <br>
+                <h2><?php echo  $row['price'] , "zł"; ?></h2>
+            </div>
+            <div id="Ilosc-info">
+                <form type='Post'>
+                    <h4>ILOŚĆ</h4>
+                    <input type="number" name='ilosc_pr'>
+                    <br>
+                    <button>dodaj do koszka</button>
+                    <button>Kup i zapłać</button>
+                </form>
+            </div>
+        </div>
+        
+        </div>
+        <div id="Opis">
+            <h1>Tu Będzie Opis Jak Ktoś Doda Opis do BD</h1>
+        </div>
+    </main> 
+      <?php             
+            }
+        ?>
 <footer>
         <p>Korzystanie z serwisu oznacza akceptację regulaminu</p>
         <h2>SKLEP</h2>
