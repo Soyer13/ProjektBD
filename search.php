@@ -11,7 +11,7 @@
     <header>
         <h1>SKLEP</h1>
         <form id="serchbarform" action="search.php" method="GET">
-        <input id="serchbar" type="text" name = "Nazwa" placeholder="Wyszukaj">
+        <input id="serchbar" type="text" name = "Nazwa" placeholder="Wyszukaj" required>
         <button id="serchbarButton" >Wyszukaj</button>
     </form>
     </header>
