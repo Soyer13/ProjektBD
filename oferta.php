@@ -10,12 +10,18 @@
 <body>
 <header>
         <h1>SKLEP</h1>
-        <form id="serchbarform" action="search.php" method="GET"><input id=serchbar type="text" placeholder="Wyszukaj"> <button id=serchbarButton>Wyszukaj</button></form>
+        <form id="serchbarform" action="search.php" method="GET">
+        <input id="serchbar" type="text" name = "Nazwa" placeholder="Wyszukaj">
+        <button id="serchbarButton" >Wyszukaj</button>
+    </form>
     </header>
     <?php
     $idP = $_GET['id'];
     ?>
 
+    <main>
+        
+    </main>
 <footer>
         <p>Korzystanie z serwisu oznacza akceptację regulaminu</p>
         <h2>SKLEP</h2>

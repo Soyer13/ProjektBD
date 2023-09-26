@@ -16,8 +16,11 @@
     require_once('connection.php');
     ?>
     <header>
-        <h1>SKLEP</h1>
-        <form id="serchbarform" action="search.php" method="GET"><input id=serchbar type="text" placeholder="Wyszukaj"> <button id=serchbarButton>Wyszukaj</button></form>
+        <h1><a herf='index.php'>SKLEP</a></h1>
+    <form id="serchbarform" action="search.php" method="GET">
+        <input id="serchbar" type="text" name = "Nazwa" placeholder="Wyszukaj">
+        <button id="serchbarButton" >Wyszukaj</button>
+    </form>
     </header>
     <main>
         <div id='NaCzasie' class="scroll-container">

@@ -12,7 +12,7 @@ header{
     height: 100px;
 }
 main{
-    
+    min-height: 800px;
 }
 #NaCzasie
 {
@@ -87,6 +87,23 @@ main{
     color: #DE1D43;
     margin: 5px;
     padding: 100px;
+}
+.Oferta-Wyszukanie
+{
+    text-align: center;
+    font-size: 24px;
+    height: 200px;
+    border-style: solid;
+    margin: 5px;
+    padding: 30px;
+    color: #02A676;
+}
+.Oferta-Wyszukanie a{
+    color: #DE1D43;
+}
+.Oferta-Wyszukanie h3
+{
+    font-size: 40px;
 }
 footer{
     display: flex;
