@@ -16,11 +16,33 @@
     </form>
     </header>
     <?php
+    #Pobieranie ID Poroduktu
     $idP = $_GET['id'];
+    require_once('connection.php');
+    $sql  = "SELECT products.id,products.name,products.prod_cat_id,products.price,users.login FROM products ,users WHERE products.id =  $idP AND products.users_id = users.id";
+    $dane =  mysqli_query($conn, $sql);
     ?>
-
     <main>
-        
+        <div>
+            <h1>
+                <?php 
+                if ($dane) {
+                // Pobierz dane z wyniku zapytania
+                $row = mysqli_fetch_assoc($dane);
+
+                // Wyświetl dane
+                if ($row) {
+                    echo "ID Produktu: " . $row['id'] . "<br>";
+                    echo "Nazwa: " . $row['name'] . "<br>";
+                    echo "ID Kategorii Produktu: " . $row['prod_cat_id'] . "<br>";
+                    echo "Cena: " . $row['price'] . "<br>";
+                    echo "Login użytkownika: " . $row['login'] . "<br>";
+                } else {
+                    echo "Brak wyników.";
+                }
+            }
+?></h1>
+        </div>
     </main>
 <footer>
         <p>Korzystanie z serwisu oznacza akceptację regulaminu</p>
