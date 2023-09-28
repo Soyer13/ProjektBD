@@ -33,5 +33,4 @@ CSS
 	Czerwony - #DE1D43
 
 	--- Trzeba Podlinkować sprzedawce do konta
-	--- Dodać link do strony głównej w hederze (wsm można by zwinąć header i foter do jednego pliku)
 

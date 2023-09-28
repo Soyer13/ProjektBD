@@ -10,6 +10,7 @@
 <body>
 <?php include('header.php'); ?>
 <main>
+    <!-- Formularz logowania -->
     <div id = "LogForm">
         <form action="logowanie.php" method="post" >
             <h2>Login</h2><br>
@@ -24,16 +25,20 @@
     <?php
         #wyłączenie wrningów 
         error_reporting(E_ERROR | E_PARSE);
+        #Przejecie Wpisu Użytkownika 
         $login = $_POST["login"];
         $pass = $_POST['Haslo'];
+        #Sprawdzenie czy login jest pusty
         if(!empty($login))
         {
+        #Sprawdzenie czy w badzie danych jest taki użytkownik
         $sql = "SELECT * FROM users WHERE login = '$login' AND password = '$pass'";
         $dane =  mysqli_query($conn, $sql);
         if ($dane->num_rows > 0) {
             echo "Zalogowano pomyślnie"; 
+            #Przypisanie Loginu do sesji
             $_SESSION['login'] = $login;
-            
+
         } else {
             echo "Błąd logowania. Nieprawidłowy login lub hasło."; 
         } 

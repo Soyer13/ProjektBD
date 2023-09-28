@@ -2,6 +2,12 @@
     session_start();
     require_once('connection.php');
 ?>
+<script>
+        function odswiezStrone() {
+            // Odśwież stronę
+            location.reload();
+        }
+    </script>
 <header>
  
     <a href='index.php'>
@@ -21,7 +27,9 @@
     }
     else
     {
-        echo "Witaj " , $_SESSION['login'];
+       ?> <h2><?php echo "Witaj " , $_SESSION['login']; ?></h2>
+       <button onclick="<?php session_unset(); ?> odswiezStrone() ">Wyloguj</button>
+       <?php
     }
     ?>
     
