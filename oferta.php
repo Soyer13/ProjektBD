@@ -8,15 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styl.css">
 </head>
 <body>
-<header>
-        <a href='index.php'>
-            <h1>SKLEP</h1>
-        </a>
-        <form id="serchbarform" action="search.php" method="GET">
-        <input id="serchbar" type="text" name = "Nazwa" placeholder="Wyszukaj" required>
-        <button id="serchbarButton" >Wyszukaj</button>
-    </form>
-    </header>
+    <?php include('header.php'); ?>
     <?php
     #Pobieranie ID Poroduktu
     $idP = $_GET['id'];
@@ -66,10 +58,7 @@
       <?php             
             }
         ?>
-<footer>
-        <p>Korzystanie z serwisu oznacza akceptację regulaminu</p>
-        <h2>SKLEP</h2>
-    </footer>
+<?php include('footer.php'); ?>
      
 </body>
 </html>

@@ -15,17 +15,7 @@
 
     require_once('connection.php');
     ?>
-    <header>
-    
-        <a href='index.php'>
-            <h1>SKLEP</h1>
-        </a>
-    
-        <form id="serchbarform" action="search.php" method="GET">
-            <input id="serchbar" type="text" name="Nazwa" placeholder="Wyszukaj" required>
-            <button id="serchbarButton">Wyszukaj</button>
-        </form>
-    </header>
+    <?php include('header.php'); ?>
     <main>
         <div id='NaCzasie' class="scroll-container">
             <h1>Na Czasie</h1>
@@ -101,10 +91,7 @@
 
 
     </main>
-    <footer>
-        <p>Korzystanie z serwisu oznacza akceptację regulaminu</p>
-        <h2>SKLEP</h2>
-    </footer>
+    <?php include('footer.php'); ?>
     <script src="script.js"></script>
 </body>
 
