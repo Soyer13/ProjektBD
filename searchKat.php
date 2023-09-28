@@ -13,15 +13,15 @@
             <h1>SKLEP</h1>
         </a>
         <form id="serchbarform" action="search.php" method="GET">
-        <input id="serchbar" type="text" name = "Nazwa" placeholder="Wyszukaj" required>
+        <input id="serchbar" type="text" name = "Kategoria" placeholder="Wyszukaj" required>
         <button id="serchbarButton" >Wyszukaj</button>
     </form>
     </header>
     <main>
         <?php
-            $Nazwa = $_GET['Nazwa'];
+            $Kategoria = $_GET['Kategoria'];
             require_once('connection.php');
-            $sql  = "SELECT id,name , price FROM products WHERE name LIKE '%$Nazwa%'";
+            $sql  = "SELECT id,name , price FROM products WHERE prod_cat_id = $Kategoria";
                 $dane =  mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($dane)) {
                 ?>

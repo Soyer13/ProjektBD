@@ -21,6 +21,7 @@ main{
 #NaCzasie a
 {
   color: #02A676;
+  text-decoration: none;
 }
 #NaCzasie button{
     color: #DE1D43;
@@ -70,6 +71,11 @@ main{
     padding: 40px;
     color: #DE1D43;
 }
+.Dla-CB a
+{
+    color: #DE1D43;
+    text-decoration: none;
+}
 #Kategorie
 {
     font-weight: bold;
@@ -88,6 +94,10 @@ main{
     margin: 5px;
     padding: 100px;
 }
+#KategorieCon a
+{
+    color: #DE1D43;
+}
 .Oferta-Wyszukanie
 {
     text-align: center;
@@ -100,6 +110,7 @@ main{
 }
 .Oferta-Wyszukanie a{
     color: #DE1D43;
+    text-decoration: none;
 }
 .Oferta-Wyszukanie h3
 {
@@ -136,6 +147,9 @@ button{
 }
 h1{
     text-align: center;
+}
+a {
+    text-decoration: none;
 }
 
 /* styles.css */
