@@ -32,6 +32,8 @@
         $dane =  mysqli_query($conn, $sql);
         if ($dane->num_rows > 0) {
             echo "Zalogowano pomyślnie"; 
+            $_SESSION['login'] = $login;
+            
         } else {
             echo "Błąd logowania. Nieprawidłowy login lub hasło."; 
         } 

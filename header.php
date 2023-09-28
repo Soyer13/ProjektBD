@@ -12,6 +12,18 @@
         <input id="serchbar" type="text" name="Nazwa" placeholder="Wyszukaj" required>
         <button id="serchbarButton">Wyszukaj</button>
     </form>
-    <a href="logowanie.php"><h2>Logowanie</h2></a>
+    <?php
+    if(!isset($_SESSION['login']))
+    {
+        ?>
+            <a href="logowanie.php"><h2>Logowanie</h2></a>
+        <?php
+    }
+    else
+    {
+        echo "Witaj " , $_SESSION['login'];
+    }
+    ?>
+    
    
 </header>
