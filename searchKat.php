@@ -12,7 +12,7 @@
     <main>
         <?php
             $Kategoria = $_GET['Kategoria'];
-            require_once('connection.php');
+            
             $sql  = "SELECT id,name , price FROM products WHERE prod_cat_id = $Kategoria";
                 $dane =  mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($dane)) {

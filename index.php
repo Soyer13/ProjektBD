@@ -11,10 +11,7 @@
 </head>
 
 <body>
-    <?php
 
-    require_once('connection.php');
-    ?>
     <?php include('header.php'); ?>
     <main>
         <div id='NaCzasie' class="scroll-container">

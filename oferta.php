@@ -12,7 +12,7 @@
     <?php
     #Pobieranie ID Poroduktu
     $idP = $_GET['id'];
-    require_once('connection.php');
+
     $sql  = "SELECT products.id,products.name,products.prod_cat_id,products.price,users.login FROM products ,users WHERE products.id =  $idP AND products.users_id = users.id";
     $dane =  mysqli_query($conn, $sql);
     ?>

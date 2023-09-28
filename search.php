@@ -12,7 +12,7 @@
     <main>
         <?php
             $Nazwa = $_GET['Nazwa'];
-            require_once('connection.php');
+            
             $sql  = "SELECT id,name , price FROM products WHERE name LIKE '%$Nazwa%'";
                 $dane =  mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($dane)) {
