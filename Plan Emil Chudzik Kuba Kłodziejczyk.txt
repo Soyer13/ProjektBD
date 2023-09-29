@@ -5,10 +5,10 @@ Strona
 >Strona dla uzytkownika 
 	- Dodawanie ofert
 	- "Dokonywanie zakupów"
-	- wyszukiwanie prodóktów
-		- po nazwie
-		- po kategori
-	- utrzymywanie sesji logowania 
+	- wyszukiwanie prodóktów /
+		- po nazwie /
+		- po kategori /
+	- utrzymywanie sesji logowania / 
 	- koszyk
 	- promowanie produktów za opłatą
 	-? porównywanie cen produktu do konkurencyjnych ofert
@@ -31,7 +31,14 @@ CSS
 	Czarny
 	Zielony - #02A676
 	Czerwony - #DE1D43
+	
+	DO Zrobienia
 
 	--- Trzeba Podlinkować sprzedawce do konta
 	--- Zablokować Wysyłanie Formularza Wielokortnie
+
+	-- Stworzenie strony z kątem
+	-- Stworzenie dodawania ofert
+	-- Stworzenie Kupowania ofert
+	-- Koszyk
 
