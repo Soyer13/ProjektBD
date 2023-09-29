@@ -32,3 +32,5 @@ CSS
 	Zielony - #02A676
 	Czerwony - #DE1D43
 
+	--- Trzeba Podlinkować sprzedawce do konta
+
