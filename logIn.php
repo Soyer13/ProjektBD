@@ -32,12 +32,23 @@
         if(!empty($login))
         {
         #Sprawdzenie czy w badzie danych jest taki użytkownik
-        $sql = "SELECT * FROM users WHERE login = '$login' AND password = '$pass'";
+        $sql = "SELECT id FROM users WHERE login = '$login' AND password = '$pass'";
         $dane =  mysqli_query($conn, $sql);
         if ($dane->num_rows > 0) {
             echo "Zalogowano pomyślnie"; 
+            $row = mysqli_fetch_assoc($dane);
             #Przypisanie Loginu do sesji
             $_SESSION['login'] = $login;
+            $_SESSION['user_id'] = $row['id'];
+
+            ?>
+            <script>
+                
+                alert("Zalogowano Użytkownika" );
+                window.location.href = "index.php";
+            </script>
+
+            <?php
 
         } else {
             echo "Błąd logowania. Nieprawidłowy login lub hasło."; 

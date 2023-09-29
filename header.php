@@ -29,6 +29,8 @@
     else
     {
        ?> <h2><?php echo "Witaj " , $_SESSION['login']; ?></h2>
+        <h2><?php echo "Witaj " , $_SESSION['user_id']?></h2>
+       
        <button onclick="<?php session_unset(); ?> odswiezStrone() ">Wyloguj</button>
        <?php
     }

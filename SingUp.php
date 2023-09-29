@@ -22,7 +22,7 @@
             <input type="text" name="email" required>
             <h2>Login</h2>
             <input type="text" name="login" required>
-            <h2>Hało</h2>
+            <h2>Hasło</h2>
             <input type="password" name="pass" required>
             <h1>Informacje Dodatkowe</h1>
             <h2>Telefon</h2>
@@ -56,6 +56,10 @@
             if(mysqli_query($conn, $sql))
             {
                 $_SESSION['login'] = $Login;
+                $sql = "SELECT id FROM users WHERE login = '$Login' AND password = '$Pass'";
+                $dane =  mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($dane);
+                $_SESSION['user_id'] = $row['id'];
                 ?>
                 <script>
                 
