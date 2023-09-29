@@ -33,4 +33,5 @@ CSS
 	Czerwony - #DE1D43
 
 	--- Trzeba Podlinkować sprzedawce do konta
+	--- Zablokować Wysyłanie Formularza Wielokortnie
 

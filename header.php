@@ -22,7 +22,8 @@
     if(!isset($_SESSION['login']))
     {
         ?>
-            <a href="logowanie.php"><h2>Logowanie</h2></a>
+            <a href="logIn.php"><h2>Logowanie</h2></a>
+            <a href="SingUp.php"><h2>Stwórz Konto</h2></a>
         <?php
     }
     else

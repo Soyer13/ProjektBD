@@ -12,7 +12,7 @@
 <main>
     <!-- Formularz logowania -->
     <div id = "LogForm">
-        <form action="logowanie.php" method="post" >
+        <form action="LogIn.php" method="post" >
             <h2>Login</h2><br>
             <input type="text" name="login" required>
             <h2>Hasło</h2><br>
