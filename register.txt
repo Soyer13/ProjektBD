@@ -1,0 +1,13 @@
+<?php
+$sql = "SELECT login
+          FROM users 
+         WHERE login = '$Login'";
+$dane2 =  mysqli_query($conn, $sql);
+if ($dane2->num_rows > 0) {
+    echo "Użytkownik o tej nazwie już istnieje"; 
+} else {
+    # tutaj umiesc to co dalej ma sie wykonywac jesli nie ma takiego loginu w bazie
+    # albo
+    # daj w IF'ie powyzej, jesli umiesz, cos takiego ze kod przestaje sie wykonywac dalej i mozna wtedy zrezygnowac z else'a
+} 
+?>

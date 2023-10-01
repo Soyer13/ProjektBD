@@ -19,7 +19,7 @@
             <div class='slider'>
                 <div class="product-container">
                     <?php
-                    $sql  = "SELECT id,name , price FROM products";
+                    $sql  = "SELECT id, name, price FROM products";
                     $dane =  mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($dane)) {
                     ?>
@@ -43,13 +43,17 @@
             <div class="slider">
                 <div class="product-container">
                     <?php
-                    $sql  = "SELECT id,name FROM product_categories";
+                    $sql  = "SELECT id, name, image_url FROM product_categories";
                     $dane =  mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($dane)) {
                     ?>
                         <div class="Kategorie">
-                            <h2><a href="searchKat.php?Kategoria='<?php echo $row['id'] ?>'"><?php echo  $row['name'] ?></a></h2>
-
+                                <a href="searchKat.php?Kategoria='<?php echo $row['id'] ?>'">
+                                    <img class="kategorie" src="images/<?php echo $row['image_url'] ?>">
+                                    <div class="tekst">
+                                        <h2><?php echo $row['name'] ?></h2>
+                                    </div>
+                                </a>
                         </div>
                     <?php
                     }

@@ -94,6 +94,12 @@ main{
     margin: 5px;
     padding: 100px;
 }
+
+img.kategorie {
+    height: 350px;
+    width: 300px;
+}
+
 #KategorieCon a
 {
     color: #DE1D43;
