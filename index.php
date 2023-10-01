@@ -47,9 +47,11 @@
                     $dane =  mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($dane)) {
                     ?>
-                        <div class="Kategorie">
+                        <div class="Kategorie" style="background-image: url(images/<?php echo $row['image_url'] ?>) !important;
+                        background-size: cover;
+                        background-repeat: no-repeat;">
                                 <a href="searchKat.php?Kategoria='<?php echo $row['id'] ?>'">
-                                    <img class="kategorie" src="images/<?php echo $row['image_url'] ?>">
+                                    <!--<img class="kategorie" src="images/<?php echo $row['image_url'] ?>">-->
                                     <div class="tekst">
                                         <h2><?php echo $row['name'] ?></h2>
                                     </div>
