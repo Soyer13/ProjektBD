@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styl.css">
     <title>Zapisz Sie!</title>
-    
+
 </head>
 
 <body>
@@ -47,43 +47,47 @@
         $City = $_POST['city'];
         $Adr = $_POST['address'];
         #Sprawdzenie czy login jest pusty
-        
         #Sprawdzenie czy w badzie danych jest taki użytkownik
-        $sql = "INSERT INTO users (id, last_name, first_name, phone, email, login, password, city, address, image_url, if_admin) 
+        $sql = "SELECT login
+        FROM users 
+        WHERE login = '$Login'";
+        $dane2 =  mysqli_query($conn, $sql);
+        if ($dane2->num_rows > 0) {
+            ?>
+            <h2>Użytkownik o tej nazwie już istnieje</h2>
+            <?php
+        } else {
+            #Zapis Użytkownika
+            $sql = "INSERT INTO users (id, last_name, first_name, phone, email, login, password, city, address, image_url, if_admin) 
         VALUES (NULL, '$LastName', '$Name', '$Tel', '$Email', '$Login', '$Pass', '$City', '$Adr', '', 'n')";
-        if(!empty($Login))
-        {
-            if(mysqli_query($conn, $sql))
-            {
-                $_SESSION['login'] = $Login;
-                $sql = "SELECT id FROM users WHERE login = '$Login' AND password = '$Pass'";
-                $dane =  mysqli_query($conn, $sql);
-                $row = mysqli_fetch_assoc($dane);
-                $_SESSION['user_id'] = $row['id'];
-                ?>
-                <script>
-                
-                alert("Stworzono Użytkownika");
-                window.location.href = "index.php";
-                </script>
-                <?php       
-            }
-            else
-            {
-                ?>
-                <script>
-                alert("Błąd");
-                </script>
+            if (!empty($Login)) {
+                if (mysqli_query($conn, $sql)) {
+                    $_SESSION['login'] = $Login;
+                    $sql = "SELECT id FROM users WHERE login = '$Login' AND password = '$Pass'";
+                    $dane =  mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_assoc($dane);
+                    $_SESSION['user_id'] = $row['id'];
+        ?>
+                    <script>
+                        alert("Stworzono Użytkownika");
+                        window.location.href = "index.php";
+                    </script>
                 <?php
-                
+                } else {
+                ?>
+                    <script>
+                        alert("Błąd");
+                    </script>
+        <?php
+
+                }
             }
         }
-        
-        
-        
-        
-        
-    ?>
+
+
+
+
+        ?>
     </main>
     <?php include('footer.php'); ?>
 </body>
