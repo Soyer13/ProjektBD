@@ -46,7 +46,7 @@
                     <div id="Ilosc-info">
                         <form method='POST' action="">
                             <h4>ILOŚĆ</h4>
-                            <input type="number" name='ilosc_pr'>
+                            <input type="number" name='ilosc_pr' placeholder="1">
                             <br>
                             <button type="submit" name="akcja" value="dodaj">dodaj do koszka</button>
                             <button type="submit" name="akcja" value="kup">Kup i zapłać</button>
