@@ -37,7 +37,9 @@ CSS
 	--- Trzeba Podlinkować sprzedawce do konta
 	--- Zablokować Wysyłanie Formularza Wielokortnie  (chyba zrobione)
 	--- Wylogowywanie
+	--- Zabespieczyć Przy braku znalazienia w bazie (produktów itp)
 
+	
 	-- Stworzenie strony z kątem
 	-- Stworzenie dodawania ofert
 	-- Stworzenie Kupowania ofert
