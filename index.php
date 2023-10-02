@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    <!--Wywołanie Nagłówka -->
     <?php include('header.php'); ?>
     <main>
         <div id='NaCzasie' class="scroll-container">
@@ -19,6 +19,7 @@
             <div class='slider'>
                 <div class="product-container">
                     <?php
+                    #Wypisanie Produktów
                     $sql  = "SELECT id, name, price FROM products";
                     $dane =  mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($dane)) {
@@ -43,6 +44,7 @@
             <div class="slider">
                 <div class="product-container">
                     <?php
+                    #Wypisanie Kategori
                     $sql  = "SELECT id, name, image_url FROM product_categories";
                     $dane =  mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($dane)) {
@@ -73,6 +75,7 @@
             <div class='slider'>
                 <div class="product-container">
                     <?php
+                    #Wypiosanie produktów
                     $sql  = "SELECT id,name , price FROM products";
                     $dane =  mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($dane)) {

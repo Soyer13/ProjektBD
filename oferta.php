@@ -14,14 +14,13 @@
     <?php
     #Pobieranie ID Poroduktu
     $idP = $_GET['id'];
-
+    #Pobieranie Danych produktu
     $sql  = "SELECT products.id,products.name,products.prod_cat_id,products.price,users.login FROM products ,users WHERE products.id =  $idP AND products.users_id = users.id";
     $dane =  mysqli_query($conn, $sql);
     ?>
     <main>
         <?php
         if ($dane) {
-            // Pobierz dane z wyniku zapytania
             $row = mysqli_fetch_assoc($dane);
         ?>
             <div id=nazwa>
@@ -46,7 +45,7 @@
                     <div id="Ilosc-info">
                         <form method='POST' action="">
                             <h4>ILOŚĆ</h4>
-                            <input type="number" name='ilosc_pr' placeholder="1">
+                            <input type="number" name='ilosc_pr' placeholder="1" min = "1" max="">
                             <br>
                             <button type="submit" name="akcja" value="dodaj">dodaj do koszka</button>
                             <button type="submit" name="akcja" value="kup">Kup i zapłać</button>
@@ -67,9 +66,10 @@
 
 <?php
 // Inicjalizacja zmiennej $idp
-$idp = null;
+
 
 // Jeśli formularz został przesłany (kliknięcie przycisku "Dodaj do koszyka" lub "Kup i zapłać")
+#COŚ JEST NIE TAK Z DODAWANIEM DO TABLICY
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ilosc_pr = $_POST['ilosc_pr'];
     $akcja = $_POST['akcja'];

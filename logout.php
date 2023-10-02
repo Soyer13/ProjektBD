@@ -1,8 +1,9 @@
 <?php
+#Zresetowanie Sesji
 include('header.php');
 session_unset();
 
-// Przekieruj na stronę główną (lub inną stronę docelową po wylogowaniu)
-header("Location: index.php"); // Możesz podać inną stronę docelową
+#Przekierowanie na strone główną
+header("Location: index.php");
 
 ?>

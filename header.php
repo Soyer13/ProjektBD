@@ -19,6 +19,7 @@
         <button id="serchbarButton">Wyszukaj</button>
     </form>
     <?php
+    #Sprawdzenie czy użytkownik jest zalogowany 
     if(!isset($_SESSION['login']))
     {
         ?>
