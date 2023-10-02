@@ -18,6 +18,7 @@
         </div>
         <div>
             <?php
+            #Wypisanie Informacji Użytkownika
             $login = $_SESSION["login"];
              $sql = "SELECT * FROM users WHERE login = '$login' ";
              $dane =  mysqli_query($conn, $sql);

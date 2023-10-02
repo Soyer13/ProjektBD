@@ -1,4 +1,3 @@
-// script.js
 
 // Znajdź wszystkie kontenery i przypisz do zmiennych
 const scrollContainers = document.querySelectorAll('.scroll-container');

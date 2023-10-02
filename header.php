@@ -19,6 +19,7 @@
         <button id="serchbarButton">Wyszukaj</button>
     </form>
     <?php
+    #Sprawdzenie czy użytkownik jest zalogowany 
     if(!isset($_SESSION['login']))
     {
         ?>
@@ -32,11 +33,13 @@
     {
        ?> <a href="account.php"><h2><?php echo "Witaj " , $_SESSION['login']; ?></h2></a>
 
-
-       <!--<button onclick="<?php #session_unset(); ?> odswiezStrone() ">Wyloguj</button>-->
+<form method="get" action="logout.php">
+    <button>Wyloguj</button>
+</form>
+        
        <?php
     }
     ?>
     
-   
+    
 </header>

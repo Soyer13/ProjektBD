@@ -12,9 +12,10 @@
     <main>
         <?php
             $Nazwa = $_GET['Nazwa'];
-            
+            #Wyszukanie produktów gdzie nazwa jest zbliżona do tego czego wpisał użytkownik
             $sql  = "SELECT id,name , price FROM products WHERE name LIKE '%$Nazwa%'";
                 $dane =  mysqli_query($conn, $sql);
+                #Wypisanie Ofert
                 while ($row = mysqli_fetch_assoc($dane)) {
                 ?>
                     <div class="Oferta-Wyszukanie">

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- tu powstanie kreator ofert -->
     <?php include('header.php'); ?>
     <main>
         <h1>Nowa Oferta</h1>
