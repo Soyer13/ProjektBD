@@ -35,12 +35,10 @@ CSS
 	DO Zrobienia
 
 	--- Trzeba Podlinkować sprzedawce do konta
-	--- Zablokować Wysyłanie Formularza Wielokortnie
+	--- Zablokować Wysyłanie Formularza Wielokortnie  (chyba zrobione)
 
 	-- Stworzenie strony z kątem
 	-- Stworzenie dodawania ofert
 	-- Stworzenie Kupowania ofert
 	-- Koszyk
-
-	--- Trzeba Podlinkować sprzedawce do konta
 
