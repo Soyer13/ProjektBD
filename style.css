@@ -85,8 +85,8 @@ main{
 .Kategorie
 {
     height: 350px;
-    width: 300px;
-    text-align:center;
+    width: 500px;
+    text-align: center;
     font-size: 30px;
     padding-top: 150px;
     background-color: #1A1A1A;
@@ -203,6 +203,9 @@ a {
     color: #02A676;
     padding: 10%;
 }
+.cart_div {
+    margin-bottom: 10px;
+}
 #Ilosc-info button
 {
     background: #05dd34;
@@ -210,6 +213,14 @@ a {
     padding: 10px;
     margin-top:5px;
 }
+
+button {
+    background: #05dd34;
+    color: #1A1A1A;
+    padding: 10px;
+    margin-top:5px;
+}
+
 #Ilosc-info input
 {
     height: 20px;
