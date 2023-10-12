@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styl.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Zapisz Sie!</title>
 
 </head>
@@ -13,6 +13,7 @@
 <body>
     <?php include('header.php'); ?>
     <main>
+        <h1>Zarejestruj</h1>
         <form action="SingUp.php" method="post">
             <h2>Imie</h2>
             <input type="text" name="first-name" required>
@@ -58,8 +59,8 @@
             <?php
         } else {
             #Zapis Użytkownika
-            $sql = "INSERT INTO users (id, last_name, first_name, phone, email, login, password, city, address, image_url, if_admin) 
-        VALUES (NULL, '$LastName', '$Name', '$Tel', '$Email', '$Login', '$Pass', '$City', '$Adr', '', 'n')";
+            $sql = "INSERT INTO users (id, last_name, first_name, phone, email, login, password, city, address, image_url) 
+        VALUES (NULL, '$LastName', '$Name', '$Tel', '$Email', '$Login', '$Pass', '$City', '$Adr', '')";
             if (!empty($Login)) {
                 if (mysqli_query($conn, $sql)) {
                     $_SESSION['login'] = $Login;

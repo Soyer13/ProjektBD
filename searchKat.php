@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklep</title>
-    <link rel="stylesheet" type="text/css" href="styl.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <?php include('header.php'); ?>
@@ -13,7 +13,7 @@
         <?php
             $Kategoria = $_GET['Kategoria'];
             
-            $sql  = "SELECT id,name , price FROM products WHERE prod_cat_id = $Kategoria";
+            $sql  = "SELECT id,name , price FROM products WHERE prod_cat_id = $Kategoria AND if_sold = 'n'";
                 $dane =  mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($dane)) {
                 ?>

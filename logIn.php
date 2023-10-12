@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styl.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Logowanie</title>
 </head>
 <body>
@@ -12,6 +12,7 @@
 <main>
     <!-- Formularz logowania -->
     <div id = "LogForm">
+        <h1>Zaloguj</h1>
         <form action="LogIn.php" method="post" >
             <h2>Login</h2><br>
             <input type="text" name="login" required>
@@ -20,6 +21,7 @@
             <br>
             <input type="submit" value="Zaloguj">
         </form>
+        <p>Nie masz jeszcze konta? <a href="SingUp.php">Zarejestruj się!</a></p>
     </div>
 
     <?php

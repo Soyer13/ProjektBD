@@ -14,10 +14,27 @@
     <!-- tu powstanie kreator ofert -->
     <?php include('header.php'); ?>
     <main>
-        <h1>Nowa Oferta</h1>
+        <h1>Edytuj ofertę</h1>
         <form action="offersCreator.php" method="post" enctype="multipart/form-data">
+            <?php
+                $prod_id = $_GET['edit'];
+                $sql2 = "SELECT products.id AS 'prod_id',
+                                products.name AS 'prod_name',
+                                price,
+                                quantity,
+                                products.image_url AS 'prod_img',
+                                description,
+                                product_categories.name AS 'cat_name',
+                                product_categories.id AS 'cat_id'
+                           FROM products, product_categories
+                          WHERE products.id = $prod_id
+                            AND if_sold = 'n'
+                            AND products.prod_cat_id = product_categories.id";
+                $dane2 = mysqli_query($conn, $sql2);
+                $row2 = mysqli_fetch_assoc($dane2);
+            ?>
             <h2>Nazwa produktu</h2>
-            <input type="text" name="name" required>
+            <input type="text" name="name" value="<?php echo $row2['prod_name'] ?>" required>
             <h2>Kategoria</h2>
             <!--<input type="section" list="scripts" placeholder="Wybierz jedną: " size="10" name="category" required> tutaj dodać listę-->
             <select name="category">
@@ -30,18 +47,19 @@
                 <?php
                 }
                 ?>
+                <option selected value="<?php echo $row2['cat_id'] ?>"><?php echo $row2['cat_name'] ?> (aktualnie)</option>
             </select>
             <h2>Cena</h2>
-            <input type="number" name="price" placeholder="w PLN" min="0" required> zł
+            <input type="number" name="price" placeholder="w PLN" min="0" value="<?php echo $row2['price'] ?>" required> zł
             <h2>Ilość sztuk</h2>
-            <input type="number" name="quantity" min="1" max="1000" required>
+            <input type="number" name="quantity" min="1" max="1000" value="<?php echo $row2['quantity'] ?>" required>
             <h2>Opis</h2>
-            <input type="text" name="description" required>
+            <input type="text" name="description" value="<?php echo $row2['description'] ?>" required>
             <h2>Dodaj zdjęcie</h2>
             <input type="file" name="image" required>
             <br>
             <br>
-            <input type="submit" name="submit" value="Dodaj ogłoszenie">
+            <input type="submit" name="submit" value="Zaktualizuj ogłoszenie">
         </form>
 
         <?php
@@ -88,9 +106,10 @@
                 $quantity = $_POST['quantity'];
                 $description = $_POST['description'];
 
-                $sql = "INSERT INTO `products` 
-                             VALUES (NULL, '$name', '$category', '$price', '$quantity', '$description', '$new_img_name', '$login_id', 'n')";
-                mysqli_query($conn, $sql);
+                $sql5 = "UPDATE `products` 
+                           SET `name` = '$name', `prod_cat_id` = '$category', `price` = '$price', `quantity` = '$quantity', `description` = '$description', `image_url` = '$new_img_name'
+                         WHERE `id` = '$prod_id'";
+                mysqli_query($conn, $sql5);
                 //$row = mysqli_fetch_assoc($dane)
             } 
         ?>
